@@ -69,6 +69,10 @@ void tooie_clear_dp_freeze(uint8_t* rdram, recomp_context* ctx);
 // whose projection is wider than the planes those tests build.
 void tooie_expand_visibility(uint8_t* rdram, recomp_context* ctx);
 
+// Expand-only complete bounds around the shared composite-pickup bowl draw.
+void tooie_expand_pickup_scope(uint8_t* rdram, recomp_context* ctx, uint32_t stage);
+void tooie_expand_pickup_radius(uint8_t* rdram, recomp_context* ctx);
+
 // RT64 interpolation metadata. The game emits none of its own, so every
 // transform looks new to RT64 and it blends matrices that do not correspond,
 // which distorts the player model above the game's own frame rate. These add
